@@ -1,0 +1,17 @@
+.main-header {
+  background-image: url("https://paulridgeblog.files.wordpress.com/2015/04/o-old-movie-film-facebook.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 60rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-header>h1 {
+  color: white;
+  margin-left: 40rem;
+  /* background-color: #403d51aa; */
+  text-shadow: 2px 2px 8px var(--color-theme);
+}

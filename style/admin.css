@@ -1,0 +1,26 @@
+.movies-admin-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  /* gap: 2rem; */
+  /* background-color: red; */
+  margin: 2.4rem auto;
+}
+
+.container {
+  width: 128rem;
+  max-width: 90%;
+  margin: 0 auto;
+  text-align: end;
+}
+
+.container.admin > h2 {
+  text-align: center;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+.container.admin > a {
+  margin-left: auto;
+  background-color: green;
+}

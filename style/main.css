@@ -1,0 +1,121 @@
+@import "admin.css";
+@import "index-page.css";
+@import "form.css";
+@import "general.css";
+@import "movie-card.css";
+@import "nav.css";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+:root {
+  /* --color-theme: #7935e7; */
+  /* --color-theme: #8245e5; */
+  --color-theme: #32364a;
+  --white: #ffffff;
+  --shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  /* --shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;; */
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+  height: 100%;
+}
+
+body {
+  font-size: 1.6rem;
+  min-height: 100%;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+ul>li {
+  list-style-type: none;
+}
+
+main.content {
+  flex: 1;
+  position: relative;
+}
+
+.message-background {
+  content: "";
+  background-color: rgba(171, 171, 171, 0.6);
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.message-container {
+  background-color: white;
+  padding: 1.6rem;
+  border-radius: .8rem;
+  text-align: center;
+  max-width: 40rem;
+  min-width: 24rem;
+  position: absolute;
+  top: 20%;
+  z-index: 3;
+  animation: appear .4s ease-in-out;
+}
+
+.message-container>p {
+  margin-bottom: 1.6rem;
+}
+
+.admin-form-container {
+  width: 60rem;
+  max-width: 80%;
+  /* background-color: red; */
+  padding: .8rem 1.6rem;
+  border-radius: .8rem;
+  box-shadow: var(--shadow);
+  margin-top: 1.6rem;
+}
+
+.back-link {
+  color: var(--color-theme);
+  /* text-decoration: underline; */
+  cursor: pointer;
+  font-weight: 700;
+  padding: .2rem 4rem;
+}
+
+footer {
+  padding: 1.6rem;
+}
+
+@keyframes appear {
+  0% {
+    transform: scale(.8);
+    opacity: 0;
+  }
+
+  80% {
+    transform: scale(1.05);
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width:840px) {}

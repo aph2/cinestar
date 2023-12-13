@@ -1,0 +1,23 @@
+nav {
+  background: #fff;
+  line-height: 60px;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 4rem;
+  background: var(--color-theme);
+}
+
+nav > ul {
+  display: flex;
+  justify-content: space-around;
+  gap: 1rem;
+}
+nav a {
+  color: white;
+}
+
+.logo {
+  font-size: 25px;
+  font-weight: 900;
+}
