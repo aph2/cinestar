@@ -18,10 +18,6 @@ function getItems($con, $table, $condition)
   }
 
   $result = mysqli_query($con, $sql);
-  // if ($result->num_rows > 0) {
-  //   return $result->fetch_assoc();
-  // }
-
   return $result;
 }
 
