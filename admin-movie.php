@@ -26,12 +26,12 @@ if (isset($_GET['slug'])) {
 if (isset($_POST['update'])) {
   $name = $_POST['name'];
   $slug = $_POST['slug'];
-  $category = $_POST['category'];
+  $category_id = $_POST['category_id'];
   $image_url = $_POST['image_url'];
   $id = $movie['id'];
 
 
-  $q = "UPDATE movies SET name='$name', slug='$slug', category='$category', image_url='$image_url' WHERE id=$id";
+  $q = "UPDATE movies SET name='$name', slug='$slug', category_id='$category_id', image_url='$image_url' WHERE id=$id";
 
   $edit_query = mysqli_query($con, $q) or die("error occurred: $con->error");
 
@@ -57,13 +57,13 @@ if (isset($_POST['update'])) {
 } else if (isset($_POST['create'])) {
   $name = $con->real_escape_string($_POST['name']);
   $slug = $con->real_escape_string($_POST['slug']);
-  $category = $con->real_escape_string($_POST['category']);
+  $category_id = $con->real_escape_string($_POST['category_id']);
   $image_url = $con->real_escape_string($_POST['image_url']);
   $description = $con->real_escape_string($_POST['description']);
 
   $sql = "
-    INSERT INTO movies (name, description, category, image_url, slug)
-    VALUES ('$name', '$description', ' $category', '$image_url', '$slug');
+    INSERT INTO movies (name, description, category_id, image_url, slug)
+    VALUES ('$name', '$description', ' $category_id', '$image_url', '$slug');
   ";
 
   $result = mysqli_query($con, $sql);
@@ -102,8 +102,8 @@ if (isset($_POST['update'])) {
                 <input type="text" name="slug" id="slug" value="<?php echo $movie['slug']; ?>" autocomplete="off" required>
               </div>
               <div class="input-field">
-                <label for="category">Category</label>
-                <input type="text" name="category" id="category" value="<?php echo $movie['category']; ?>" autocomplete="off" required>
+                <label for="category_id">Category</label>
+                <input type="text" name="category_id" id="category_id" value="<?php echo $movie['category_id']; ?>" autocomplete="off" required>
               </div>
               <div class="input-field">
                 <label for="image_url">Image</label>

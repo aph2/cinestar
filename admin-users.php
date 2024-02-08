@@ -5,13 +5,11 @@ if (!$isAdmin) {
 }
 
 $users = getItems($con, "users", "id <> 1");
-// $sql = "select email from users where id <> 1;";
-// $users = mysqli_query($con, $sql);
 ?>
 <div class="container admin">
   <h2>Users list:</h2>
-  <a href="admin-movie.php">
-    <button class="btn">Add new movie</button>
+  <a href="admin-users.php">
+    <button class="btn">Add new user</button>
   </a>
   <section class="flex flex-col gap-2 py-2">
     <?php foreach ($users as $user) : ?>
